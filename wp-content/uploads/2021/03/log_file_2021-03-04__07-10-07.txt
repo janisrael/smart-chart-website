@@ -1,0 +1,17 @@
+
+---Downloaded files---
+The import files for: Import SKT Charity Lite Demo were successfully downloaded!
+Initial max execution time = 30
+Files info:
+Site URL = https://sc-website.app
+Data file = /Users/jan/dev/smartcharts-wp-site/wp-content/themes/skt-charity-lite/demo-content/demo-content.xml
+Widget file = not defined!
+Customizer file = not defined!
+
+---Importing content---
+[WARNING] Could not find the menu object for "" (post #200)
+
+Max execution time after content import = 300
+
+---theme-demo-import/after_import---
+
