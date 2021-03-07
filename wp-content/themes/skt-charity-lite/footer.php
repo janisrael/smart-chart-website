@@ -34,7 +34,28 @@ global $complete;?>
     	<div class="rowfooter<?php if ($footertype == 5) {?> footernone<?php } ?>">
             <div class="clear"></div>
     		<?php if ($footertype == 4) {?>
-            <div class="footercols4"><?php if (dynamic_sidebar('footer-1')) : else : ?><h3><?php if (!empty ($complete['foot_cols1_title'])) { $ftcols1 = html_entity_decode($complete['foot_cols1_title']); $ftcols1 = stripslashes($ftcols1); echo do_shortcode($ftcols1); } ?></h3><?php $ftcols1cntnt = $complete['foot_cols1_content']; echo do_shortcode($ftcols1cntnt); endif;?></div>
+			<div class="footercols4"><?php if (dynamic_sidebar('footer-1')) : else : ?>
+				<div class="logo" style="margin: 0px 0px 28px 0px !important; padding-left: 0px !important;">
+					<?php if(!empty($complete['logo_image_id']['url'])){   ?>
+					<a class="logoimga" title="<?php bloginfo('name') ;?>" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php $logo = $complete['logo_image_id']; echo $logo['url']; ?>" /></a> <span class="desc"><?php echo bloginfo('description'); ?></span>
+					<?php }else{ ?>
+					<?php if ( is_home() ) { ?>
+					<h1><a href="<?php echo esc_url( home_url( '/' ) );?>">
+					  <?php bloginfo('name'); ?>
+					  </a></h1>
+					<span class="desc"><?php echo bloginfo('description'); ?></span>
+					<?php }else{ ?>
+					<h2><a href="<?php echo esc_url( home_url( '/' ) );?>">
+					  <?php bloginfo('name'); ?>
+					  </a></h2>
+					<span class="desc"><?php echo bloginfo('description'); ?></span>
+					<?php } ?>
+					<?php } ?>
+				  </div>
+				<?php $ftcols1cntnt = $complete['foot_cols1_content']; echo do_shortcode($ftcols1cntnt); endif;?></div>
+			
+<!--             <div class="footercols4"><?php if (dynamic_sidebar('footer-1')) : else : ?><h3><?php if (!empty ($complete['foot_cols1_title'])) { $ftcols1 = html_entity_decode($complete['foot_cols1_title']); $ftcols1 = stripslashes($ftcols1); echo do_shortcode($ftcols1); } ?></h3><?php $ftcols1cntnt = $complete['foot_cols1_content']; echo do_shortcode($ftcols1cntnt); endif;?></div> -->
+			
             <div class="footercols4"><?php if (dynamic_sidebar('footer-2')) : else : ?><h3><?php if (!empty ($complete['foot_cols2_title'])) { $ftcols2 = html_entity_decode($complete['foot_cols2_title']); $ftcols2 = stripslashes($ftcols2); echo do_shortcode($ftcols2); } ?></h3><?php $ftcols2cntnt = $complete['foot_cols2_content']; echo do_shortcode($ftcols2cntnt); endif;?>
             </div>
             <div class="footercols4"><?php if (dynamic_sidebar('footer-3')) : else : ?><h3><?php if (!empty ($complete['foot_cols3_title'])) { $ftcols3 = html_entity_decode($complete['foot_cols3_title']); $ftcols3 = stripslashes($ftcols3); echo do_shortcode($ftcols3); } ?></h3><?php $ftcols3cntnt = $complete['foot_cols3_content']; echo do_shortcode($ftcols3cntnt); endif;?></div>
@@ -56,7 +77,8 @@ global $complete;?>
     </div>
     <div id="copyright">
     	 <div class="center">
-         	<div class="copytext"><?php $copyrightcntnt = $complete['footer_text_id']; echo do_shortcode($copyrightcntnt); ?></div>
+			 <div class="copytext">© Copyright 2021 SmartCharts. All Rights Reserved by SmartCharts</div>
+<!--          	<div class="copytext"><?php $copyrightcntnt = $complete['footer_text_id']; echo do_shortcode($copyrightcntnt); ?></div> -->
     	 </div>
     </div>
 </div>

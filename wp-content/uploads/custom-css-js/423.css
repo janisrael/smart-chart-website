@@ -33,5 +33,13 @@ End of comment */
 
 h5 {
   font-size: 23px !important;
-}</style>
+}
+
+@media only screen and (max-width: 479px) {
+.logo {
+    max-width: 65px !important;
+}
+}
+
+</style>
 <!-- end Simple Custom CSS and JS -->
