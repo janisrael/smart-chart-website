@@ -37,7 +37,7 @@ global $complete;?>
 			<div class="footercols4"><?php if (dynamic_sidebar('footer-1')) : else : ?>
 				<div class="logo" style="margin: 0px 0px 28px 0px !important; padding-left: 0px !important;">
 					<?php if(!empty($complete['logo_image_id']['url'])){   ?>
-					<a class="logoimga" title="<?php bloginfo('name') ;?>" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php $logo = $complete['logo_image_id']; echo $logo['url']; ?>" /></a> <span class="desc"><?php echo bloginfo('description'); ?></span>
+					<a class="logoimga" title="<?php bloginfo('name') ;?>" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php $logo = $complete['logo_image_id']; echo $logo['url']; ?>" style="height: auto !important;width: 195px !important;"/></a> <span class="desc"><?php echo bloginfo('description'); ?></span>
 					<?php }else{ ?>
 					<?php if ( is_home() ) { ?>
 					<h1><a href="<?php echo esc_url( home_url( '/' ) );?>">
